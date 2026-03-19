@@ -1,0 +1,13 @@
+# Write your solution here
+
+
+
+def length_of_longest(l):
+
+  max_l = ""
+  for i in l:
+
+    if len(max_l) < len(i):
+      max_l = i
+
+  return len(max_l)
