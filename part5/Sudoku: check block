@@ -1,0 +1,18 @@
+# Write your solution here
+
+
+def block_correct(sudoku: list, row_no: int, column_no: int):
+  new_l = []
+
+  for row in range(row_no, row_no + 3):
+    for square in range(column_no, column_no + 3):
+
+      number = sudoku[row][square]
+
+      if number > 0 and number in new_l:
+        return False
+      new_l.append(number)
+  
+  return True
+
+
