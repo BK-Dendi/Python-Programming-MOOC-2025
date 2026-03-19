@@ -1,0 +1,41 @@
+# Write your solution here
+from datetime import datetime
+
+
+def is_it_valid(pic: str):
+  if len(pic) != 11:
+    return False
+  
+  date = pic[:6]
+  century_mark = pic[6]
+  individual = pic[7:10]
+  control = pic[-1]
+  
+  if not (date + individual).isdigit():
+    return False
+  
+  if not century_mark in ["+","-","A"]:
+    return False
+  
+  day = int(date[:2])
+  month = int(date[2:4])
+  year_part = int(date[4:6])
+
+  if century_mark == "+":
+    year = year_part + 1800
+  elif century_mark == "-":
+    year = year_part + 1900
+  else:
+    year = 2000 + year_part
+
+  try:
+    datetime(year, month, day)
+  except:
+    return False
+  
+  number = date + individual 
+  rem = int(number) % 31 
+  control_chars = "0123456789ABCDEFHJKLMNPRSTUVWXY"
+  expected = control_chars[rem]
+
+  return control == expected
