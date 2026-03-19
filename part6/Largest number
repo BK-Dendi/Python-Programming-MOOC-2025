@@ -1,0 +1,12 @@
+# write your solution here
+
+def largest():
+  max_value = 0
+  with open("numbers.txt","r") as file:
+    for line in file:
+      line = int(line.replace("\n",""))
+
+      if line > max_value:
+        max_value = line 
+  
+  return max_value
