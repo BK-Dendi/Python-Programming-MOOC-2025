@@ -1,0 +1,14 @@
+# Write your solution here
+
+
+def no_shouting(l):
+
+  new_l = []
+
+
+  for i in l:
+    if not i.isupper():
+      new_l.append(i)
+
+  return new_l
+
