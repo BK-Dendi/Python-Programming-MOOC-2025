@@ -1,0 +1,19 @@
+# write your solution here
+
+def main():
+  sentence = input("Write text:")
+  words = sentence.split()
+  allowed = []
+  with open("wordlist.txt") as file:
+    for line in file:
+      allowed.append(line.strip().lower())
+  new_list = []
+  for w in words:
+    if w.lower() in allowed:
+      new_list.append(w)
+    else:
+      new_list.append(f"*{w}*")
+  
+  return " ".join(new_list)
+      
+print(main())
