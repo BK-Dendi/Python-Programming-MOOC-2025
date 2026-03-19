@@ -1,0 +1,10 @@
+# Write your solution here
+
+limit = int(input("Limit: "))
+num = 1
+s = 0
+while limit > s:
+    s += num
+    num += 1
+
+print(s)
