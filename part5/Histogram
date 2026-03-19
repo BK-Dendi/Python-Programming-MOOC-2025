@@ -1,0 +1,13 @@
+# Write your solution here
+
+def histogram(string: str):
+  letter = {}
+
+  for char in string:
+    if char not in letter:
+      letter[char] = 0
+    letter[char] += 1 
+
+  for key, item in letter.items():
+    num = "*" * item
+    print(f"{key} {num}")
