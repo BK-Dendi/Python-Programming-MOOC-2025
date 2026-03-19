@@ -1,0 +1,7 @@
+# Write your solution here
+
+def double_items(numbers: list):
+  new_l = []
+  for i in numbers:
+    new_l.append(i*2)
+  return new_l
