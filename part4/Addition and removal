@@ -1,0 +1,18 @@
+# Write your solution here
+l = []
+i = 1
+while True:
+  print(f"The list is now {l}")
+  command = input("a(d)d, (r)emove or e(x)it:")
+
+
+  if command == "d":
+    l.append(i)
+    i+= 1
+  elif command == "r":
+    l.pop(len(l) - 1)
+    i -= 1
+  else:
+    break
+
+print("Bye!")
