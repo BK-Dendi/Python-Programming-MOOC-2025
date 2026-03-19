@@ -1,0 +1,7 @@
+# Write your solution here
+
+limit = int(input("Upper limit: "))
+integer = 1
+while integer < limit:
+    print(integer)
+    integer += 1
