@@ -1,0 +1,42 @@
+class Series:
+
+
+  def __init__(self,title,numberSeasons,list_genres):
+    self.title = title
+    self.numberSeasons = numberSeasons
+    self.list_genres = list_genres
+    self.ratings = []
+
+
+  def rate(self,rating: int):
+    self.ratings.append(rating)
+
+  def average(self):
+    return sum(self.ratings) / len(self.ratings)
+
+  def __str__(self):
+    if len(self.ratings) > 0:
+
+      return f"{self.title} ({self.numberSeasons} seasons)\ngenres: {", ".join(self.list_genres)}\n{len(self.ratings)} ratings, average {self.average():.1f} points"
+    else:
+      return f"{self.title} ({self.numberSeasons} seasons)\ngenres: {", ".join(self.list_genres)}\nno ratings"
+
+
+def minimum_grade(rating: float, series_list: list):
+  new_list = []
+  for series in series_list:
+    if rating < series.average():
+      new_list.append(series)
+  return new_list
+
+
+def includes_genre(genre: str, series_list: list):
+  new_list = []
+  for series in series_list:
+    for s in series.list_genres:
+      if genre == s:
+        new_list.append(series)
+        break
+  return new_list
+
+
