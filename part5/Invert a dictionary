@@ -1,0 +1,13 @@
+# Write your solution here
+
+def invert(dictionary: dict):
+  d = {}
+
+  for key,item in dictionary.items():
+    d[item] = key
+  dictionary.clear()
+  for key, item in d.items():
+    dictionary[key] = item
+
+
+
