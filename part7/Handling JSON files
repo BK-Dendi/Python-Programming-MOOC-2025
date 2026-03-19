@@ -1,0 +1,14 @@
+# Write your solution here
+import json
+def print_persons(filename: str):
+  with open(filename) as file:
+    data = file.read()
+  files = json.loads(data)
+  for file in files:
+    print(f"{file["name"]} {file["age"]} years ({', '.join(file["hobbies"])})")
+
+
+if __name__ == "__main__":
+  filename = input("")
+  print_persons(filename)
+  
