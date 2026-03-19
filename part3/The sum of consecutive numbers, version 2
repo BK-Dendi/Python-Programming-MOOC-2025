@@ -1,0 +1,14 @@
+# Write your solution here
+
+limit = int(input("Limit:"))
+s = 1
+word = ""
+num = 1
+
+while s < limit:
+    num += 1
+    s += num
+    word += f"+ {num} "
+
+print(f"The consecutive sum: 1 {word} = {s}")
+    
