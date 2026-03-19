@@ -1,0 +1,25 @@
+def validate_week(week:str):
+  word, num = week.split()
+  if word != "week":
+    return False
+  if not num.isdigit():
+    return False
+  return True
+
+def validate_numbers(nums:str):
+  num_list = []
+  parts = nums.split(",")
+  for i in parts:
+    if i.isdigit():
+      if int(i) >= 1 and int(i) <= 39:
+        num_list.append(i)
+  return len(set(num_list)) == 7
+
+def filter_incorrect():
+  with open("lottery_numbers.csv") as file, open("correct_numbers.csv", "w") as new_file:
+    for line in file:
+      week, numbers = line.strip().split(";")
+      if validate_week(week) and validate_numbers(numbers):
+        new_file.write(f"{week};{numbers}\n")
+
+filter_incorrect()
