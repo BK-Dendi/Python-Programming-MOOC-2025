@@ -1,0 +1,11 @@
+# Write your solution here
+
+
+def formatted(l):
+  new_l = []
+
+  for i in l:
+    s = "{:.2f}".format(i)
+    new_l.append(s)
+
+  return new_l
