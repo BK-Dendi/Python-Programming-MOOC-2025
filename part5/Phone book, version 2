@@ -1,0 +1,27 @@
+# Write your solution here
+
+d = {}
+while True:
+  command = input("command (1 search, 2 add, 3 quit): ")
+  if command == "2":
+    name = input("name: ")
+    number = input("number: ")
+
+    if name not in d:
+      d[name] = []
+    d[name].append(number)
+    print("ok!")
+  elif command == "1":
+    search_name = input("name: ")
+    if search_name in d:
+      for i in d[search_name]:
+        print(i)
+    else:
+      print("no number")
+  elif command == "3":
+    print("quitting...")
+    break
+
+
+
+
