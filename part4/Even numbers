@@ -1,0 +1,10 @@
+# Write your solution here
+
+def even_numbers(l):
+  new_l = []
+  for i in l:
+
+    if i % 2 == 0:
+      new_l.append(i)
+
+  return new_l
