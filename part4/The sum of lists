@@ -1,0 +1,11 @@
+# Write your solution here
+
+def list_sum(l1,l2):
+  new_l = []
+  for i in range(0, len(l1)):
+
+    s = l1[i] + l2[i]
+    new_l.append(s)
+
+  return new_l
+
