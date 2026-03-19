@@ -1,0 +1,13 @@
+# Write your solution here
+
+l = []
+while True:
+  word = input("Word: ")
+  
+  if word not in l:
+    l.append(word)
+  else:
+    print(f"You typed in {len(l)} different words")
+    break
+  
+
