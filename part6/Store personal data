@@ -1,0 +1,11 @@
+# Write your solution here
+
+def store_personal_data(person: tuple):
+  with open("people.csv","a") as file:
+    person_csv = []
+    person_csv .append(person[0])
+    person_csv .append(str(person[1]))
+    person_csv .append(str(person[2]))
+    sol = ";".join(person_csv) + "\n"
+    file.write(sol)
+    
