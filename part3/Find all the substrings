@@ -1,0 +1,11 @@
+# Write your solution here
+
+word = input("Word: ")
+char = input("Please type in a character: ")
+index = 0 
+
+while index < len(word) - 2:
+
+    if word[index] == char:
+        print(word[index:index + 3])
+    index += 1
