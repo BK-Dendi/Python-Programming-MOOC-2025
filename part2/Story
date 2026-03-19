@@ -1,0 +1,13 @@
+# Write your solution here
+final_word = ""
+last = ""
+while True:
+    word = input("Please type in a word: ")
+    
+    if word == "end" or last == word:
+        break
+
+    final_word += word + " "
+    last = word
+    
+print(final_word)
