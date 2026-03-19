@@ -1,0 +1,17 @@
+# Write your solution here
+
+def longest(strings: list):
+
+  longest = 0
+  word = ""
+  for i in strings:
+    if len(i) > longest:
+      longest = len(i)
+      word = i
+
+  return word
+
+
+if __name__ == "__main__":
+    strings = ["hi", "hiya", "hello", "howdydoody", "hi there"]
+    print(longest(strings))
