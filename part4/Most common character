@@ -1,0 +1,17 @@
+# Write your solution here
+
+def most_common_character(string):
+  most = 0
+  char = ""
+  for i in string:
+      if string.count(i) > most:
+        most = string.count(i)
+        char = i
+  return char
+
+
+
+
+if __name__ == "__main__":
+  second_string = "exemplaryelementary"
+  print(most_common_character(second_string))
