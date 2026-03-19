@@ -1,0 +1,41 @@
+# Write your solution here
+# Write your solution here
+def writefile(finnish, english):
+  with open("dictionary.txt", "a") as file:
+    file.write(f"{finnish}:{english}\n")
+
+def readfile():
+  words = {}
+  with open("dictionary.txt") as file:
+    for line in file:
+      line = line.replace("\n","")
+      parts = line.split(":")
+      words[parts[0]] = parts[1]
+  
+  return words
+      
+
+def main():
+  while True:
+    print("1 - Add word, 2 - Search, 3 - Quit")
+    function = int(input("Function: "))
+
+    if function == 3:
+      print("Bye!")
+      break
+
+    elif function == 1:
+      finnish = input("The word in Finnish: ")
+      english = input("The word in English: ")
+      writefile(finnish,english)
+      print("Dictionary entry added")
+    
+    elif function == 2:
+      search = input("Search term: ")
+      words = readfile()
+      for key, value in words.items():
+        if search in value.lower() or search in key.lower():
+          print(f"{key} - {value}")
+      
+
+main()
