@@ -1,0 +1,12 @@
+# Write your solution here
+
+def distinct_numbers(l):
+
+  new_l = []
+
+
+  for i in l:
+    if i not in new_l:
+      new_l.append(i)
+
+  return sorted(new_l)
