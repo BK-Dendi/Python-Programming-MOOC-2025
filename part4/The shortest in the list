@@ -1,0 +1,10 @@
+# Write your solution here
+
+
+def shortest(l):
+  
+  short = l[0]
+  for i in l:
+    if len(short) > len(i):
+      short = i
+  return short
