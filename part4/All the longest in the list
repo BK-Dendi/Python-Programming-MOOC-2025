@@ -1,0 +1,16 @@
+# Write your solution here
+
+def all_the_longest(l):
+
+  new_l = []
+  longest = 0
+
+  for i in l:
+    if len(i) > longest:
+      longest = len(i)
+
+  for i in l:
+    if len(i) == longest:
+      new_l.append(i)
+
+  return new_l
