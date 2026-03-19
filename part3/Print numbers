@@ -1,0 +1,8 @@
+# Write your solution here
+num = 2
+while True:
+    print(num)
+    num += 2
+
+    if num > 30:
+        break
