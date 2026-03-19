@@ -1,0 +1,55 @@
+def matrix_sum():
+  final_nums = []
+  total = 0 
+  with open("matrix.txt", "r") as file:
+    for line in file:
+      line = line.replace("\n","")
+      parts = line.split(",")
+      nums = []
+      for num in parts:
+        nums.append(int(num))
+      total += total_sum(nums)
+  return total
+
+def total_sum(nums:list):
+  sum_value = 0
+  for num in nums:
+    sum_value += num
+  return sum_value 
+
+def max_value(nums:list):
+  value = nums[0]
+  for num in nums:
+    if num > value:
+      value = num
+  return value
+
+def matrix_max():
+  final_value = -100000
+  with open("matrix.txt","r") as file:
+    for line in file:
+      line = line.replace("\n","")
+      parts = line.split(",")
+      nums = []
+      for num in parts:
+        nums.append(int(num))
+      if max_value(nums) > final_value:
+        final_value = max_value(nums)
+  return final_value
+
+def row_sums():
+  final_rows = []
+  with open("matrix.txt","r") as file:
+    for line in file:
+      line = line.replace("\n","")
+      parts = line.split(",")
+      nums = []
+      for num in parts:
+        nums.append(int(num))
+      final_rows.append(total_sum(nums))
+  return final_rows
+
+if __name__ == "__main__":
+  print(matrix_sum())
+  print(matrix_max())
+  print(row_sums())
