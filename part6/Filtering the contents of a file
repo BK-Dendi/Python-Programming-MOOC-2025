@@ -1,0 +1,33 @@
+# Write your solution here
+
+def read_file(filename:str):
+  solutions = []
+  with open(filename,"r") as file:
+    for line in file:
+      line = line.replace("\n","")
+      parts = line.split(";")
+      solutions.append(parts)
+
+  return solutions
+
+
+
+def evaluate_data(solutions:list, c_file:str, i_file:str):
+  open(c_file,"w").close()
+  open(i_file,"w").close()
+  correct = open(c_file,"w")
+  incorrect = open(i_file,"w")
+
+  for solution in solutions:
+    sol = ";".join(solution)
+    sol += "\n"
+    if eval(solution[1]) == int(solution[2]):
+      correct.write(sol)
+    else:
+      incorrect.write(sol)
+  correct.close()
+  incorrect.close()
+
+def filter_solutions():
+  solutions = read_file("solutions.csv")
+  evaluate_data(solutions, "correct.csv", "incorrect.csv")
