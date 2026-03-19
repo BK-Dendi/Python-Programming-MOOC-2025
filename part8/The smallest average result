@@ -1,0 +1,27 @@
+# Write your solution here
+
+
+def smallest_average(person1: dict, person2: dict, person3: dict):
+
+  avg_list = []
+
+  avg1 = (person1["result1"] + person1["result2"] + person1["result3"])/ 3
+  avg2 = (person2["result1"] + person2["result2"] + person2["result3"])/ 3
+  avg3 = (person3["result1"] + person3["result2"] + person3["result3"])/ 3
+
+
+  avg_list.append(avg1)
+  avg_list.append(avg2)
+  avg_list.append(avg3)
+
+
+  avg_min = min(avg_list)
+
+  if avg_min == avg1:
+    return person1 
+  elif avg_min == avg2:
+    return person2
+  elif avg_min == avg3:
+    return person3 
+  else:
+    return {}
