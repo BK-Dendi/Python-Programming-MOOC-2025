@@ -1,0 +1,7 @@
+# Write your solution here
+
+def create_tuple(x: int, y: int, z: int):
+  new_l = [x,y,z]
+  final = (min(new_l), max(new_l), sum(new_l))
+  return final
+  
