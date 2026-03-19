@@ -5,7 +5,7 @@ Solutions for the Python Programming MOOC by University of Helsinki (2025).
 
 This repository contains my solutions to exercises from the Python Programming course.
 
-**Study Status:** - [x] Completed 13 of 14 modules.
+**Study Status:** - Completed 13 of 14 modules.
 - [ ] Final module (in progress).
 
 **Main Topics Covered:**
