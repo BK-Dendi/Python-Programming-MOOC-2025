@@ -15,5 +15,4 @@ This repository contains my solutions to exercises from the Python Programming c
 * Working with files and exception handling.
 * Fundamentals of object-oriented programming (OOP).
 
-**Why it's here:**
 I use these problems to reinforce the Python foundation needed to move into data science and analytics.
