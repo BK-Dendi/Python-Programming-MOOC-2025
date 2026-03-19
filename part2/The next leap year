@@ -1,0 +1,15 @@
+# Write your solution here
+year = int(input("Year: "))
+next_year = year
+leap_year = False
+
+while True:
+    next_year += 1
+    if next_year % 100 == 0:
+        if next_year % 400 == 0:
+            leap_year = True
+            break
+    elif next_year % 4 == 0:
+        leap_year = True
+        break
+    
