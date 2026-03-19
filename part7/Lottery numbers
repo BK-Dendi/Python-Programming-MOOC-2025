@@ -1,0 +1,7 @@
+# Write your solution here
+from random import *
+
+def lottery_numbers(amount: int, lower: int, upper: int):
+  return sorted(sample(range(lower,upper+1), amount)) 
+
+
