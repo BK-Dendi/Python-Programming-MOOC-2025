@@ -1,0 +1,12 @@
+# Write your solution here
+
+let1 = input("1st letter: ")
+let2 = input("2nd letter: ")
+let3 = input("3rd letter: ")
+
+l = [let1, let2,let3]
+
+l.sort()
+
+print(f"The letter in the middle is {l[1]}")
+
