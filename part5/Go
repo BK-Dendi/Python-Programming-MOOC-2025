@@ -1,0 +1,28 @@
+# Write your solution here
+
+def who_won(game_board: list):
+  pl1 = 0
+  pl2 = 0
+
+  for row in game_board:
+    for square in row:
+
+      if square == 1:
+        pl1 += 1
+      elif square == 2:
+        pl2 += 1
+
+  
+  if pl1 > pl2:
+    return 1 
+  elif pl1 < pl2:
+    return 2
+  else:
+    return 0
+
+      
+
+if __name__ == "__main__":
+  m = [[1, 2, 2, 2], [0, 0, 0, 1], [0, 0, 2, 1]]
+
+  print(who_won(m))
