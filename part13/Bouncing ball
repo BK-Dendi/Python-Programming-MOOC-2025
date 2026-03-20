@@ -1,0 +1,35 @@
+# WRITE YOUR SOLUTION HERE:
+import pygame
+
+pygame.init()
+window = pygame.display.set_mode((640,480))
+
+ball = pygame.image.load("ball.png")
+
+x = 320 
+y = 240
+h = 1
+
+clock = pygame.time.Clock()
+
+xvel = 2 
+yvel = 2 
+
+while True:
+  for event in pygame.event.get():
+    if event.type == pygame.QUIT:
+      exit()
+
+  window.fill((0,0,0))
+  window.blit(ball,(x,y))
+  pygame.display.flip()
+  
+  if x + ball.get_width() >= 640 or x <= 0:
+    xvel = - xvel
+  elif y + ball.get_height() >= 480 or y <= 0:
+    yvel = - yvel
+  
+  x += xvel
+  y += yvel
+
+  clock.tick(60)
