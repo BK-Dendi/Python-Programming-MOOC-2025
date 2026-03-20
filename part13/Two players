@@ -1,0 +1,108 @@
+# WRITE YOUR SOLUTION HERE:
+import pygame 
+
+pygame.init()
+window = pygame.display.set_mode((640,480))
+
+robot = pygame.image.load("robot.png")
+robot2 = pygame.image.load("robot.png")
+
+x = 0 
+y = 0 
+
+x1 = 320
+y1 = 240
+
+to_left = False
+to_up = False
+to_right = False
+to_down = False
+
+to_left2 = False
+to_up2 = False
+to_right2 = False
+to_down2 = False
+
+clock = pygame.time.Clock()
+
+while True:
+  for event in pygame.event.get():
+    if event.type == pygame.KEYDOWN:
+      if event.key == pygame.K_LEFT:
+        to_left = True
+      elif event.key == pygame.K_RIGHT:
+        to_right = True
+      elif event.key == pygame.K_UP:
+        to_up = True
+      elif event.key == pygame.K_DOWN:
+        to_down = True 
+    
+    if event.type == pygame.KEYUP:
+      if event.key == pygame.K_LEFT:
+        to_left = False
+      elif event.key == pygame.K_RIGHT:
+        to_right = False
+      elif event.key == pygame.K_UP:
+        to_up = False
+      elif event.key == pygame.K_DOWN:
+        to_down = False
+
+    if event.type == pygame.KEYDOWN:
+      if event.key == pygame.K_a:
+        to_left2 = True
+      elif event.key == pygame.K_d:
+        to_right2 = True
+      elif event.key == pygame.K_w:
+        to_up2 = True
+      elif event.key == pygame.K_s:
+        to_down2 = True 
+    
+    if event.type == pygame.KEYUP:
+      if event.key == pygame.K_a:
+        to_left2 = False
+      elif event.key == pygame.K_d:
+        to_right2 = False
+      elif event.key == pygame.K_w:
+        to_up2 = False
+      elif event.key == pygame.K_s:
+        to_down2 = False
+
+    if event.type == pygame.QUIT:
+      exit()
+
+  if to_left:
+    if x > 0:
+      x -= 5
+  if to_right:
+    if x + robot.get_width() < window.get_width():
+      x += 5
+  if to_up:
+    if y > 0:
+      y -= 5
+  if to_down:
+    if y + robot.get_height() < window.get_height():
+      y += 5
+  
+  if to_left2:
+    if x1 > 0:
+      x1 -= 5
+  if to_right2:
+    if x1 + robot2.get_width() < window.get_width():
+      x1 += 5
+  if to_up2:
+    if y1 > 0:
+      y1 -= 5
+  if to_down2:
+    if y1 + robot2.get_height() < window.get_height():
+      y1 += 5
+
+
+
+  window.fill((0,0,0))
+  window.blit(robot, (x,y)) 
+  window.blit(robot2, (x1,y1))
+  pygame.display.flip() 
+
+  clock.tick(60)
+
+
