@@ -1,0 +1,9 @@
+# Write your solution here:
+def order(item):
+  return item[2]
+
+
+def sort_by_remaining_stock(items: list):
+  new_list = sorted(items, key = order)
+  return new_list
+
