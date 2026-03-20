@@ -16,3 +16,5 @@ This repository contains my solutions to exercises from the Python Programming c
 * Fundamentals of object-oriented programming (OOP).
 
 I use these problems to reinforce the Python foundation needed to move into data science and analytics.
+
+<img width="467" height="148" alt="Screenshot 2026-03-20 at 09 22 18" src="https://github.com/user-attachments/assets/d118a8e3-a997-48c6-9629-2ceaa33b20e3" />
